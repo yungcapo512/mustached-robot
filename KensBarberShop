@@ -1,0 +1,55 @@
+/**
+ * Course:   IT110 - Introduction to Programming
+ * Filename: KensBarberShopPhase1.java
+ * Created:  06/09/14 by Kenneth K. Booth, Jr.
+ * Modified: 06/09/14 by Kenneth K. Booth, Jr.
+ * 
+ * Purpose:  Created a simple online ordering system
+ *			 for Kens's BarberShop customers
+ */
+
+import javax.swing.JOptionPane;
+
+/**
+ * @author bary
+ */
+public class KensBarberShopPhase1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		// declare variables
+		String openingMsg, nameInputMsg, customerName, nameOutputMsg, 
+			   returnInputMsg, customerReturn, returnOutputMsg, haircuttypeInputMsg, 
+			   customerChoice, haircuttypeOutputMsg, greetingOutputMsg, outputMsg;
+
+		// display opening message
+		openingMsg = "*** Welcome to Ken's BarberShop Online Ordering System ***\n"
+				   + "                     It's a great day for a haircut!";
+		JOptionPane.showMessageDialog(null, openingMsg);
+
+		// get required input using dialogs
+		nameInputMsg   = "Please enter your name: ";
+		customerName   = JOptionPane.showInputDialog(nameInputMsg);
+		returnInputMsg = "Are you a returning customer (yes or no)? ";
+		customerReturn = JOptionPane.showInputDialog(returnInputMsg);
+		haircuttypeInputMsg = "Regular Cut, Tapper, Shave (Facial, Head, Both), Line-Up (only)?:";
+		customerChoice = JOptionPane.showInputDialog(haircuttypeInputMsg);
+
+		// build output strings
+		nameOutputMsg     = "Welcome " + customerName + ".\n\n";
+		returnOutputMsg   = "Your return customer status is " + customerReturn + ".\n";
+		haircuttypeOutputMsg = "Your haircut type selection is " + customerChoice + ".\n"; 
+		greetingOutputMsg = "Thank you for visiting Ken's BarberShop!" + "\n\n"
+						  + "Your appointment is in less than 10 minutes.\n";
+
+		// create and display output string
+		outputMsg = nameOutputMsg + returnOutputMsg + haircuttypeOutputMsg + greetingOutputMsg;
+		JOptionPane.showMessageDialog(null, outputMsg);
+
+		System.exit(0);
+	} // end main()
+
+} // end class KensBarberShopPhase1
