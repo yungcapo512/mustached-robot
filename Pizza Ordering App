@@ -1,0 +1,52 @@
+/**
+ * Course:   IT110 - Introduction to Programming
+ * Filename: PizzasRUsPhase1.java
+ * Created:  04/09/10 by Dr. Debby Telfer
+ * Modified: 11/26/13 by Dr. Bary W Pollack
+ * 
+ * Purpose:  Created a simple online ordering system
+ *			 for Pizzas-R-Us customers
+ */
+
+import javax.swing.JOptionPane;
+
+/**
+ * @author bary
+ */
+public class PizzasRUsPhase1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		// declare variables
+		String openingMsg, nameInputMsg, customerName, nameOutputMsg, 
+			   returnInputMsg, customerReturn, returnOutputMsg, 
+			   greetingOutputMsg, outputMsg;
+
+		// display opening message
+		openingMsg = "*** Welcome to Pizzas-R-Us Online Ordering System ***\n"
+				   + "                     It's a great day to order a pizza!";
+		JOptionPane.showMessageDialog(null, openingMsg);
+
+		// get required input using dialogs
+		nameInputMsg   = "Please enter your name: ";
+		customerName   = JOptionPane.showInputDialog(nameInputMsg);
+		returnInputMsg = "Are you a returning customer (yes or no)? ";
+		customerReturn = JOptionPane.showInputDialog(returnInputMsg);
+
+		// build output strings
+		nameOutputMsg     = "Welcome " + customerName + ".\n\n";
+		returnOutputMsg   = "Your return customer status is " + customerReturn + ".\n";
+		greetingOutputMsg = "Thank you for visiting Pizzas-R-Us!" + "\n\n"
+						  + "Your order should be ready in less than 10 minutes.\n";
+
+		// create and display output string
+		outputMsg = nameOutputMsg + returnOutputMsg + greetingOutputMsg;
+		JOptionPane.showMessageDialog(null, outputMsg);
+
+		System.exit(0);
+	} // end main()
+
+} // end class PizzasRUsPhase1
